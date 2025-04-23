@@ -21,6 +21,8 @@ mkdir -p .ssh
 ssh-keygen -t rsa -b 4096 -f ./.ssh/ansible_key -N ""
 chmod 600 ./.ssh/ansible_key
 ```
+![img1](https://github.com/divyanshsaxena002/Ansible-/blob/main/img/1.png))
+
 
 ## Step 2: Create Dockerfile
 ```dockerfile
@@ -52,7 +54,7 @@ for i in {1..4}; do
     ubuntu-server
 done
 ```
-
+![img2](https://github.com/divyanshsaxena002/Ansible-/blob/main/img/2.png))
 ## Step 4: Create Ansible Inventory
 ```bash
 echo "[servers]" > inventory.ini
@@ -124,7 +126,7 @@ for i in {1..4}; do
   docker rm -f server${i}
 done
 ```
-
+![img3](https://github.com/divyanshsaxena002/Ansible-/blob/main/img/End.png))
 
 6. Removed unnecessary port mapping since we're using container IPs
 7. Fixed SSH key permissions
